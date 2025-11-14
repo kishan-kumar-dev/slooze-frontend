@@ -1,17 +1,14 @@
----
-
-# ✅ **README.md (Complete & Simple)**
-
-Copy the entire content below.
-
----
-
 ````md
 # 🌾 Slooze Front-End Take Home Challenge  
 React + Vite | Role-Based Access | Light/Dark Mode | LocalStorage API
 
 This project is a simple **Commodities Management System** built for the Slooze Front-End Challenge.  
 Even with zero backend, all required features are implemented using **React + Vite**, **React Router**, and **localStorage**.
+
+---
+
+## 🔗 Live Demo  
+**https://slooze-frontend-eight.vercel.app**
 
 ---
 
@@ -49,21 +46,21 @@ Even with zero backend, all required features are implemented using **React + Vi
 - Store Keeper is blocked from Manager-only routes  
 - Buttons & navigation controlled by role  
 
-All challenge requirements are covered.
+All challenge requirements are fully covered ✔️
 
 ---
 
 ## 👤 Demo Users (for testing)
 
-| Role          | Email                 | Password  |
-|---------------|------------------------|-----------|
-| **Manager**   | manager@example.com    | password  |
-| **StoreKeeper** | store@example.com      | password  |
+| Role            | Email               | Password |
+|-----------------|---------------------|----------|
+| **Manager**     | manager@example.com | password |
+| **StoreKeeper** | store@example.com   | password |
 
 ---
 
 ## 🛠️ Tech Stack
-- **React** (Vite)
+- **React (Vite)**
 - **React Router**
 - **LocalStorage** (mock API + auth)
 - **CSS (custom, lightweight)**
@@ -129,37 +126,38 @@ src/
 
 ### 1. Login
 
-* You enter email + password
-* Code checks against a predefined user list
-* If valid → user saved to localStorage
+* User enters email + password
+* Credentials checked against predefined list
+* If valid → user saved in localStorage
 * App redirects to `/products`
 
 ### 2. Role-Based Access
 
-* Manager → can open Dashboard + Products
-* StoreKeeper → only Products
-* ProtectedRoute component blocks restricted pages
+* **Manager** → access Dashboard + Products
+* **StoreKeeper** → Products only
+* `ProtectedRoute` component restricts pages based on role
 
 ### 3. Data Storage
 
-Products are stored as JSON in:
+Products stored in:
 
 ```
 localStorage["slooze_products"]
 ```
 
-Every action (add/edit/delete) updates this storage.
+Every action (add / edit / delete) updates this JSON list.
 
 ### 4. Light / Dark Theme
 
-* UI theme value stored in `localStorage["slooze_theme"]`
+* Theme saved in `localStorage["slooze_theme"]`
 * CSS variables update instantly
+* Works across all pages
 
 ---
 
 ## 📸 Screenshots (Optional)
 
-You can add your own:
+You can add images inside `/public/screenshots/`:
 
 ```
 /public/screenshots/login.png
@@ -167,22 +165,36 @@ You can add your own:
 /public/screenshots/dashboard.png
 ```
 
-Then reference them:
+Then reference them like:
 
 ```md
 ![Login](public/screenshots/login.png)
+![Products](public/screenshots/products.png)
+![Dashboard](public/screenshots/dashboard.png)
 ```
 
 ---
 
-## 🧪 Testing (Manual)
+## 📤 Deployment
 
-1. Login as Manager → check dashboard
-2. Add product → verify list updates
-3. Edit product → save and confirm changes
-4. Delete product → confirm deletion
-5. Login as Store Keeper → ensure no dashboard access
-6. Try entering `/dashboard` manually → should show "Access Denied"
-7. Toggle light/dark mode → refresh page → mode persists
+This project is deployed on **Vercel**.
+
+To deploy your own version:
+
+```bash
+npm run build
+```
+
+Then connect your GitHub repo to Vercel, select **Vite**, and click **Deploy**.
 
 ---
+
+## 🤝 Author
+
+**Kishan Kumar**
+GitHub: [https://github.com/kishan-kumar-dev](https://github.com/kishan-kumar-dev)
+Live Demo: [https://slooze-frontend-eight.vercel.app](https://slooze-frontend-eight.vercel.app)
+
+---
+
+```
